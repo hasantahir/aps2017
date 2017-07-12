@@ -20,7 +20,7 @@
 %%   \import{<path to file>}{<filename>.pdf_tex}
 %% Alternatively, one can specify
 %%   \graphicspath{{<path to file>/}}
-%% 
+%%
 %% For more information, please see info/svg-inkscape on CTAN:
 %%   http://tug.ctan.org/tex-archive/info/svg-inkscape
 %%
@@ -50,32 +50,32 @@
   \makeatother%
   \begin{picture}(1,0.46442369)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{equivalence.pdf}}%
-    \put(0.11661315,0.29779779){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{($\E_2, \u_2$)}}}}%
-    \put(0.10141886,0.15533367){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$(\E_1, \u_1)$}}}}%
-    \put(0.41020077,0.15471243){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$(\E_1, \u_1)$}}}}%
-    \put(0.57808101,0.28192971){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\v M_s$}}}}%
-    \put(0.36024334,0.18201478){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\v J_s$}}}}%
-    \put(0.10286735,0.24761821){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\v E_2, \v H_2$}}}}%
-    \put(0.10204489,0.38702383){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\v E_1, \v H_1$}}}}%
-    \put(0.02267827,0.4088188){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\v E^i$}}}}%
-    \put(0.32771322,0.4088188){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\v E^i$}}}}%
-    \put(0.40561029,0.29779779){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$(\E_1, \u_1)$}}}}%
-    \put(0.38569611,0.24761821){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\v E' = \v H'= 0$}}}}%
-    \put(0.40666863,0.38702383){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\v E_1, \v H_1$}}}}%
-    \put(0.55412985,0.1744513){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\v{\^n}$}}}}%
-    \put(0.74462231,0.15471243){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$(\E_2, \u_2)$}}}}%
-    \put(0.91250255,0.28192971){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$-\v M_s$}}}}%
-    \put(0.67492598,0.18201478){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$-\v J_s$}}}}%
-    \put(0.74003183,0.29779779){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$(\E_2, \u_2)$}}}}%
-    \put(0.72011765,0.24761821){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\v E_2 , \v H_2$}}}}%
-    \put(0.74109014,0.38702383){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\v E' = \v H' = 0$}}}}%
-    \put(0.88855139,0.1744513){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$-\v{\^n}$}}}}%
-    \put(0.14912108,0.00347963){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$(a)$}}}}%
-    \put(0.44842598,0.00347963){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$(b)$}}}}%
-    \put(0.75691315,0.00347963){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$(c)$}}}}%
-    \put(0.50320662,0.06483734){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\v J_s$}}}}%
-    \put(0.39408197,0.06483734){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\v M_s$}}}}%
-    \put(0.71463802,0.06483734){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$-\v J_s$}}}}%
-    \put(0.83572595,0.06483734){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$-\v M_s$}}}}%
+    \put(0.11661315,0.29779779){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{($\E_2, \u_2$)}}}}%
+    \put(0.10141886,0.15533367){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$(\E_1, \u_1)$}}}}%
+    \put(0.41020077,0.15471243){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$(\E_1, \u_1)$}}}}%
+    \put(0.57808101,0.28192971){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$\v M_s$}}}}%
+    \put(0.36024334,0.18201478){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$\v J_s$}}}}%
+    \put(0.10286735,0.24761821){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$\v E_2, \v H_2$}}}}%
+    \put(0.10204489,0.38702383){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$\v E_1, \v H_1$}}}}%
+    \put(0.02267827,0.4088188){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$\v E^i$}}}}%
+    \put(0.32771322,0.4088188){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$\v E^i$}}}}%
+    \put(0.40561029,0.29779779){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$(\E_1, \u_1)$}}}}%
+    \put(0.38569611,0.24761821){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$\v E' = \v H'= 0$}}}}%
+    \put(0.40666863,0.38702383){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$\v E_1, \v H_1$}}}}%
+    \put(0.55412985,0.1744513){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$\v{\^n}$}}}}%
+    \put(0.74462231,0.15471243){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$(\E_2, \u_2)$}}}}%
+    \put(0.91250255,0.28192971){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$-\v M_s$}}}}%
+    \put(0.67492598,0.18201478){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$-\v J_s$}}}}%
+    \put(0.74003183,0.29779779){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$(\E_2, \u_2)$}}}}%
+    \put(0.72011765,0.24761821){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$\v E_2 , \v H_2$}}}}%
+    \put(0.74109014,0.38702383){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$\v E' = \v H' = 0$}}}}%
+    \put(0.88855139,0.1744513){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$-\v{\^n}$}}}}%
+    \put(0.14912108,0.00347963){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$(a)$}}}}%
+    \put(0.44842598,0.00347963){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$(b)$}}}}%
+    \put(0.75691315,0.00347963){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$(c)$}}}}%
+    \put(0.50320662,0.06083734){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$\v J_s$}}}}%
+    \put(0.39408197,0.06083734){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$\v M_s$}}}}%
+    \put(0.71463802,0.06083734){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$-\v J_s$}}}}%
+    \put(0.83572595,0.06083734){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$-\v M_s$}}}}%
   \end{picture}%
 \endgroup%

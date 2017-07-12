@@ -15,10 +15,9 @@ xmax=15,
 xlabel={$f (\SI{}{\THz})$},
 ymin=-0.001,
 ymax=0.0015,
-x label style={at={(axis description cs:0.5,0.06)}},
-y label style={at={(axis description cs:0.15,.5)}},
+x label style={at={(axis description cs:0.5,0.09)}},
+y label style={at={(axis description cs:0.19,.5)}},
 ylabel={$\sigma_s (\SI{}{\siemens})$},
-axis background/.style={fill=white},
 legend style={at={(0.03,0.97)}, anchor=north west, legend cell align=left, align=left, draw=white!15!black}
 ]
 \addplot [color=mycolor1, line width=1.2pt]

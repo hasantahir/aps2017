@@ -18,7 +18,7 @@
 % Document Title Page
 \title{An Integral Equation Scheme for Plasma based Thin Sheets}
 \author[Abbas and Nevels]{Hasan T. Abbas and Robert D. Nevels}
-\institute{Department of Electrical \& Computer Engineering\\[\medskipamount] \pgfuseimage{tamuecenbig}}
+\institute{Electromagnetics \& Microwave Laboratory\\[\medskipamount] \pgfuseimage{tamuecenbig}}
 \date[July 12, 2017]{2017 IEEE AP-S Symposium on Antennas and Propagation and USNC-URSI Radio Science Meeting\\
 July 9-14, 2017\\
 San Diego, California, USA}
@@ -92,6 +92,7 @@ bottom color=blue!50!black!20, draw=blue!40!black!60, very thick, text centered,
       \2 Subwavelength phenomena - Dispersion relations
       \2 Existence of plasmonic behavior - Sommerfeld Integral analysis
       \2 Surface Integral equation scheme
+    \1 Results
     \1 Conclusions
   \end{outline}
 \end{frame}
@@ -236,6 +237,8 @@ bottom color=blue!50!black!20, draw=blue!40!black!60, very thick, text centered,
             \2 THz emission
             \1 Electronic Flute
             \2 Tunable resonance with gate voltage
+            \1 Slow wave nature
+              \2 Subwavelength propagation
           \end{outline}
         \end{minipage}
         %
@@ -243,6 +246,7 @@ bottom color=blue!50!black!20, draw=blue!40!black!60, very thick, text centered,
       %
       \begin{column}{.5\textwidth}
         % Use this to preserve fonts from Inkspace
+        \vspace*{-1cm}
         \begin{figure}
           \hspace*{-.55cm}
           \fontsize{6}{7}\selectfont
@@ -250,13 +254,11 @@ bottom color=blue!50!black!20, draw=blue!40!black!60, very thick, text centered,
           \input{figures/flute_2deg2.pdf_tex}
           % \caption{Typical GaAs/AlGaAs HEMT}
         \end{figure}
-        \begin{equation} \nonumber
-          \begin{split}
-            \lambda &= \frac{c}{f} \\
-            & \Longrightarrow  300 \u \mathrm{m}
-          \end{split}
-          \label{eq:disp_TE_two}
-        \end{equation}
+        \centering
+        \begin{figure}
+          \subfloat{\includegraphics[width= 2.5in]{com_sim.tikz}
+          \label{fig:sim}}
+        \end{figure}
         \end{column}%
       \end{columns}
     \end{frame}
@@ -273,57 +275,46 @@ bottom color=blue!50!black!20, draw=blue!40!black!60, very thick, text centered,
 % ------------------------------------------------------------
 % ------------------------------------------------------------
 % ------------------------------------------------------------
-% ------------------------------------------------------------
-% ------------------------------------------------------------
-% ------------------------------------------------------------
-%
-% \begin{frame}
-%   \frametitle{Theory and Methods}
-%   \framesubtitle{2DEG Circuit model}
-%   \begin{columns} % align columns
-%     \begin{column}{.5\textwidth}
-%       \begin{minipage}[T][.1\textheight][c]{\linewidth}
-%         \begin{outline}[itemize]
-%           \1 Drude-Lorentz Surface Conductivity
-%         \end{outline}
-%         %
-%         \begin{equation} \nonumber
-%           \sigma_s = \frac{N_s e^2}{m^{\ast}}\frac{\tau}{1 + \j \tau \O}
-%           \label{eq:Y2deg}
-%         \end{equation}
-%         \begin{itemize}
-%           \item[] {\makebox[.3cm][l]{$N_s$} - Surface charge density}
-%           \item[] {\makebox[.3cm][l]{$\tau$} - Scattering time}
-%           \item[] {\makebox[.3cm][l]{$m^{\ast}$} - Effective electron mass}
-%         \end{itemize}
-%         \begin{outline}[itemize]
-%           \1 Equivalent Circuit
-%         \end{outline}
-%         \begin{equation} \nonumber
-%           \sigma_s = \frac{1}{Z} = \frac{1}{R + {1}/{\j \O C}}
-%           \label{eq:simga_TL}
-%         \end{equation}
-%       \end{minipage}
-%     \end{column}
-%     %
-%     \begin{column}{.5\textwidth}
-%       % Use this to preserve fonts from Inkspace
-%       \begin{figure} \vspace*{-1.75cm}
-%         \includegraphics[height = 2.0in]{cond_2deg_gan.tikz}
-%         \label{fig:cond_2deg}
-%         \caption{Room temperature GaN/AlGaN 2DEG surface conductivity}
-%       \end{figure}
-%       %
-%       \begin{figure} \vspace*{-.75cm}
-%         \centering
-%         \fontsize{6}{7}\selectfont
-%         \def\svgwidth{.75\linewidth}
-%         \input{figures/circuit.pdf_tex}
-%         % \caption{Typical GaAs/AlGaAs HEMT}
-%       \end{figure}
-%       \end{column}%
-%     \end{columns}
-%   \end{frame}
+\begin{frame}
+  \frametitle{Theory and Methods}
+  \framesubtitle{2DEG Circuit model}
+  \begin{columns} % align columns
+    \begin{column}{.5\textwidth}
+      \begin{minipage}[T][.1\textheight][c]{\linewidth}
+        \begin{outline}[itemize]
+          \1 Drude-Lorentz Surface Conductivity
+        \end{outline}
+        %
+        \begin{equation} \nonumber
+          \sigma_s = \frac{N_s e^2}{m^{\ast}}\frac{\tau}{1 + \j \tau \O}
+          \label{eq:Y2deg}
+        \end{equation}
+        \begin{itemize}
+          \item[] {\makebox[.3cm][l]{$N_s$} - Surface charge density}
+          \item[] {\makebox[.3cm][l]{$\tau$} - Scattering time}
+          \item[] {\makebox[.3cm][l]{$m^{\ast}$} - Effective electron mass}
+        \end{itemize}
+        \begin{equation} \nonumber
+          k^{\mathrm{TM}}_{\mathrm P} = \frac{\O}{c} \sqrt{1 - \left(\frac{2}{\eta_0 \sigma_s}\right)^2}
+          \label{eq:TM_pole}%
+        \end{equation}
+      \end{minipage}
+    \end{column}
+    %
+    \begin{column}{.5\textwidth}
+      % Use this to preserve fonts from Inkspace
+      \begin{figure} \vspace*{-1.5cm}
+        \includegraphics[height = 1.75in]{cond_2deg_gan.tikz}
+        \label{fig:cond_2deg}
+      \end{figure}
+      %
+      \begin{figure} \vspace*{-1.25cm}
+        \subfloat{\includegraphics[height = 1.5in]{disp_gaas_sheet_77.tikz}
+        \label{fig:disp_2deg_77}}
+      \end{figure}
+      \end{column}%
+    \end{columns}
+  \end{frame}
 % ------------------------------------------------------------
 % ------------------------------------------------------------
 % ------------------------------------------------------------
@@ -447,8 +438,13 @@ bottom color=blue!50!black!20, draw=blue!40!black!60, very thick, text centered,
       \end{equation}
       %
       \begin{equation} \nonumber
-        G_{zx}^\mathrm{A} = \frac{\j \u}{2} \cos \phi \, \mathcal{S}_1 \left \{ \frac{\Gamma^{\downarrow, \mathrm{TM}} - \Gamma^{\downarrow, \mathrm{TE}}}{ k_{\p}} \right \}.
+        E_z \approx \frac{\j \u}{2} \cos \phi \, \mathcal{S}_1 \left \{ \frac{\Gamma^{\downarrow, \mathrm{TM}} - \Gamma^{\downarrow, \mathrm{TE}}}{ k_{\p}} \right \}
         \label{eq:somm_Gzx}
+      \end{equation}
+      %
+      \begin{equation} \nonumber
+          \mathcal{S}_1\left \{\ti{F}\right \} \equiv \frac{1}{2\pi}\int\limits_0^{\inf} J_1(k_{\p}\p)  \ti{F}(k_{\p}) k_{\p} \diff{k_{\p}}.
+        \label{eq:generalized_SI}%
       \end{equation}
     \end{column}
     \begin{column}[T]{.5\textwidth}
@@ -469,18 +465,18 @@ bottom color=blue!50!black!20, draw=blue!40!black!60, very thick, text centered,
 % ------------------------------------------------------------
 % ------------------------------------------------------------
 % ------------------------------------------------------------
-% \begin{frame}
-%   \frametitle{Theory and Methods}
-%   \framesubtitle{Computed Fields  - Thin sheet}
-%   \begin{figure} \centering
-%     \subfloat {\includegraphics[height = 2in]{Gzx_gan_sheet_56_rt.tikz}
-%     \label{fig:disp_2deg_77}}
-%     \hfil
-%     \subfloat {\includegraphics[height = 2in]{Gzx_gan_sheet_56_3k.tikz}
-%     \label{fig:disp_2deg_rt}}
-%     \caption{$G^{\mathrm A}_{zx}$ computed for a GaN/AlGaN based 2DEG sheet suspended in freespace at  $\SI[round-precision=2]{5.6}{\THz}$. The surface conductivity of the sheet is (a) $\sigma_s = \num[round-precision=2]{7.6e-5} - \num[round-precision=3]{j 2.98e-3} \SI{}{\siemens}$ at room temperature ($\SI{295}{\K}$), and (b) $\sigma_s = \num[round-precision=2]{7.6e-8} - \num[round-precision=3]{j 2.98e-3} \SI{}{\siemens}$ at $\SI{3}{\K}$ }
-%   \end{figure}
-% \end{frame}
+\begin{frame}
+  \frametitle{Theory and Methods}
+  \framesubtitle{Computed Fields  - Thin sheet}
+  \begin{figure} \centering
+    \subfloat {\includegraphics[height = 2in]{Gzx_gan_sheet_56_rt.tikz}
+    \label{fig:disp_2deg_77}}
+    \hfil
+    \subfloat {\includegraphics[height = 2in]{Gzx_gan_sheet_56_3k.tikz}
+    \label{fig:disp_2deg_rt}}
+    \caption{$G^{\mathrm A}_{zx}$ computed for a GaN/AlGaN based 2DEG sheet suspended in freespace at  $\SI[round-precision=2]{5.6}{\THz}$. The surface conductivity of the sheet is (a) $\sigma_s = \num[round-precision=2]{7.6e-5} - \num[round-precision=3]{j 2.98e-3} \SI{}{\siemens}$ at room temperature ($\SI{295}{\K}$), and (b) $\sigma_s = \num[round-precision=2]{7.6e-8} - \num[round-precision=3]{j 2.98e-3} \SI{}{\siemens}$ at $\SI{3}{\K}$ }
+  \end{figure}
+\end{frame}
 % ------------------------------------------------------------
 % ------------------------------------------------------------
 % ------------------------------------------------------------
@@ -500,7 +496,7 @@ bottom color=blue!50!black!20, draw=blue!40!black!60, very thick, text centered,
   \begin{columns}[T] % align columns
     \begin{column}{.5\textwidth}
       \begin{itemize}
-        \item{Volume Integral formulation}
+        \item{Richmond's Volume Integral formulation}
       \end{itemize}
       \begin{equation} \nonumber
         \begin{split}
@@ -516,7 +512,7 @@ bottom color=blue!50!black!20, draw=blue!40!black!60, very thick, text centered,
     \end{column}
     \begin{column}[T]{.5\textwidth}
       \begin{itemize}
-        \item{Impedance (Leontovich) Boundary Condition}
+        \item{Senior's Impedance Boundary Condition}
       \end{itemize}
       \begin{equation} \nonumber
         \v E_{tan} = \eta Z_0 \hat{\v n} \times \v H
@@ -568,30 +564,30 @@ bottom color=blue!50!black!20, draw=blue!40!black!60, very thick, text centered,
 % ------------------------------------------------------------
 % ------------------------------------------------------------
 % ------------------------------------------------------------
-\begin{frame}
-  \frametitle{Proposed Scheme}
-  \framesubtitle{Surface Integral Equation}
-  \vspace*{-.4cm}
-  \begin{itemize}
-    \item{Exterior Region}
-  \end{itemize}
-  \begin{equation} \nonumber
-    \begin{split}
-      \v E_1 &= \v E_i + \v E_1^{scat} \\
-      &=  -\frac{\O}{4 k_1^2} \left( k_1^2 + \del \del \cdot \right) \int\limits_{C} \v J_s(\v p') H_0^{(2)}(k_1 |\v \p - \v \p'|) \diff{l'} \\
-      &- \frac{1}{4 \E \j} \del \x \int\limits_{l} \v M_s(\v \p') H_0^{(2)}(k_1 |\v \p - \v \p'|) \diff{l'} + \v E_i
-    \end{split}
-    \label{eq:E1sc}
-  \end{equation}
-  \begin{equation} \nonumber
-    \begin{split}
-      \v H_1 &= \v H_i + \v H_1^{scat} \\
-      &= \frac{1}{4 \j} \del \x \int\limits_{l} \v J_s(\v \p') H_0^{(2)}(k_1 |\v \p - \v \p'|) \diff{l'} \\
-      &-\frac{\O}{4 k_1^2} \left( k_1^2 + \del \del \cdot \right) \int\limits_{l} \v M_s(\v \p') H_0^{(2)}(k_1 |\v \p - \v \p'|) \diff{l'} + \v H_i
-    \end{split}
-    \label{eq:H1sc}
-  \end{equation}
-\end{frame}
+% \begin{frame}
+%   \frametitle{Proposed Scheme}
+%   \framesubtitle{Surface Integral Equation}
+%   \vspace*{-.4cm}
+%   \begin{itemize}
+%     \item{Exterior Region}
+%   \end{itemize}
+%   \begin{equation} \nonumber
+%     \begin{split}
+%       \v E_1 &= \v E_i + \v E_1^{scat} \\
+%       &=  -\frac{\O}{4 k_1^2} \left( k_1^2 + \del \del \cdot \right) \int\limits_{C} \v J_s(\v p') H_0^{(2)}(k_1 |\v \p - \v \p'|) \diff{l'} \\
+%       &- \frac{1}{4 \E \j} \del \x \int\limits_{l} \v M_s(\v \p') H_0^{(2)}(k_1 |\v \p - \v \p'|) \diff{l'} + \v E_i
+%     \end{split}
+%     \label{eq:E1sc}
+%   \end{equation}
+%   \begin{equation} \nonumber
+%     \begin{split}
+%       \v H_1 &= \v H_i + \v H_1^{scat} \\
+%       &= \frac{1}{4 \j} \del \x \int\limits_{l} \v J_s(\v \p') H_0^{(2)}(k_1 |\v \p - \v \p'|) \diff{l'} \\
+%       &-\frac{\O}{4 k_1^2} \left( k_1^2 + \del \del \cdot \right) \int\limits_{l} \v M_s(\v \p') H_0^{(2)}(k_1 |\v \p - \v \p'|) \diff{l'} + \v H_i
+%     \end{split}
+%     \label{eq:H1sc}
+%   \end{equation}
+% \end{frame}
 % ------------------------------------------------------------
 % ------------------------------------------------------------
 % ------------------------------------------------------------
@@ -599,30 +595,30 @@ bottom color=blue!50!black!20, draw=blue!40!black!60, very thick, text centered,
 % ------------------------------------------------------------
 % ------------------------------------------------------------
 % ------------------------------------------------------------
-\begin{frame}
-  \frametitle{Proposed Scheme}
-  \framesubtitle{Surface Integral Equation}
-  \vspace*{-.4cm}
-  \begin{itemize}
-    \item{Interior Region}
-  \end{itemize}
-  \begin{equation} \nonumber
-    \begin{split}
-      \v E_2 &= \v E_2^{scat} \\
-      &=  -\frac{\O}{4 k_2^2} \left( k_2^2 + \del \del \cdot \right) \int\limits_{C} \left(-\v J_s(\v p')\right) H_0^{(2)}(k_2 |\v \p - \v \p'|) \diff{l'} \\
-      &- \frac{1}{4 \j} \del \x \int\limits_{l} \left(-\v M_s(\v \p')\right) H_0^{(2)}(k_2 |\v \p - \v \p'|) \diff{l'}
-    \end{split}
-    \label{eq:E1sc}
-  \end{equation}
-  \begin{equation} \nonumber
-    \begin{split}
-      \v H_2 &= \v H_1^{scat} \\
-      &= \frac{1}{4 \j} \del \x \int\limits_{l} \left(-\v J_s(\v \p')\right) H_0^{(2)}(k_2 |\v \p - \v \p'|) \diff{l'} \\
-      &-\frac{\O}{4 k_2^2} \left( k_2^2 + \del \del \cdot \right) \int\limits_{l} \left(-\v M_s(\v \p')\right) H_0^{(2)}(k_2 |\v \p - \v \p'|) \diff{l'}
-    \end{split}
-    \label{eq:H1sc}
-  \end{equation}
-\end{frame}
+% \begin{frame}
+%   \frametitle{Proposed Scheme}
+%   \framesubtitle{Surface Integral Equation}
+%   \vspace*{-.4cm}
+%   \begin{itemize}
+%     \item{Interior Region}
+%   \end{itemize}
+%   \begin{equation} \nonumber
+%     \begin{split}
+%       \v E_2 &= \v E_2^{scat} \\
+%       &=  -\frac{\O}{4 k_2^2} \left( k_2^2 + \del \del \cdot \right) \int\limits_{C} \left(-\v J_s(\v p')\right) H_0^{(2)}(k_2 |\v \p - \v \p'|) \diff{l'} \\
+%       &- \frac{1}{4 \j} \del \x \int\limits_{l} \left(-\v M_s(\v \p')\right) H_0^{(2)}(k_2 |\v \p - \v \p'|) \diff{l'}
+%     \end{split}
+%     \label{eq:E1sc}
+%   \end{equation}
+%   \begin{equation} \nonumber
+%     \begin{split}
+%       \v H_2 &= \v H_1^{scat} \\
+%       &= \frac{1}{4 \j} \del \x \int\limits_{l} \left(-\v J_s(\v \p')\right) H_0^{(2)}(k_2 |\v \p - \v \p'|) \diff{l'} \\
+%       &-\frac{\O}{4 k_2^2} \left( k_2^2 + \del \del \cdot \right) \int\limits_{l} \left(-\v M_s(\v \p')\right) H_0^{(2)}(k_2 |\v \p - \v \p'|) \diff{l'}
+%     \end{split}
+%     \label{eq:H1sc}
+%   \end{equation}
+% \end{frame}
 % ------------------------------------------------------------
 % ------------------------------------------------------------
 % ------------------------------------------------------------
@@ -819,13 +815,12 @@ bottom color=blue!50!black!20, draw=blue!40!black!60, very thick, text centered,
 \section{Conclusion}
 \begin{frame}
   \frametitle{Summary}
-  \framesubtitle{Two-dimensional plasmonic devices}
+  % \framesubtitle{Plasmonic Terahertz deTwo-dimensional plasmonic devices}
   \begin{itemize}
-    \item Subwavelength wave phenomena at optical and terahertz frequencies
+    \item Plasmonics in semiconductor transistor structures
     \item Realization of terahertz sources and sensors
-    \item 2D nature of waves permits subwavelength confinement
-    \item Plasmonic activity
-    \item Nanoscale imaging using terahertz plasma waves
+    \item Scattering properties of infinitesimally thin plasma layers
+    \item Temperature dependent performance limitations
   \end{itemize}
 \end{frame}
 % ------------------------------------------------------------
@@ -835,11 +830,11 @@ bottom color=blue!50!black!20, draw=blue!40!black!60, very thick, text centered,
 % ------------------------------------------------------------
 % ------------------------------------------------------------
 % ------------------------------------------------------------
-\begin{frame}[plain,c]
-  \begin{center}
-    \Huge Thank you!
-  \end{center}
-\end{frame}
+% \begin{frame}[plain,c]
+%   \begin{center}
+%     \Huge Thank you!
+%   \end{center}
+% \end{frame}
 % ------------------------------------------------------------
 % ------------------------------------------------------------
 % ------------------------------------------------------------
@@ -847,11 +842,11 @@ bottom color=blue!50!black!20, draw=blue!40!black!60, very thick, text centered,
 % ------------------------------------------------------------
 % ------------------------------------------------------------
 % ------------------------------------------------------------
-\begin{frame}[plain,c]
-  \begin{center}
-    \Huge Questions?
-  \end{center}
-\end{frame}
+% \begin{frame}[plain,c]
+%   \begin{center}
+%     \Huge Questions?
+%   \end{center}
+% \end{frame}
 % ------------------------------------------------------------
 % ------------------------------------------------------------
 % ------------------------------------------------------------
