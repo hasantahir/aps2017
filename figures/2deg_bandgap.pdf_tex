@@ -20,7 +20,7 @@
 %%   \import{<path to file>}{<filename>.pdf_tex}
 %% Alternatively, one can specify
 %%   \graphicspath{{<path to file>/}}
-%%
+%% 
 %% For more information, please see info/svg-inkscape on CTAN:
 %%   http://tug.ctan.org/tex-archive/info/svg-inkscape
 %%
@@ -50,9 +50,9 @@
   \makeatother%
   \begin{picture}(1,0.55754105)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{2deg_bandgap.pdf}}%
-    \put(0.14202073,0.32893882){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$E_c$}}}}%
-    \put(0.14202073,0.26938157){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$E_f$}}}}%
-    \put(0.00266325,0.02721174){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$\mathrm{Al_{x}Ga_{1-x}As}$}}}}%
-    \put(0.41182434,0.02721174){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{$\mathrm{GaAs }$}}}}%
+    \put(0.14202073,0.32893882){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$E_c$}}}}%
+    \put(0.14202073,0.26938157){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$E_f$}}}}%
+    \put(0.00266325,0.02721174){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\mathrm{Al_{x}Ga_{1-x}As}$}}}}%
+    \put(0.41182434,0.02721174){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\mathrm{GaAs }$}}}}%
   \end{picture}%
 \endgroup%
